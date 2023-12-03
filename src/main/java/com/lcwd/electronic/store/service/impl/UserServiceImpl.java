@@ -1,6 +1,6 @@
 package com.lcwd.electronic.store.service.impl;
 
-import com.lcwd.electronic.store.dtos.PageableResponse;
+import com.lcwd.electronic.store.payload.PageableResponse;
 import com.lcwd.electronic.store.dtos.UserDto;
 import com.lcwd.electronic.store.entities.User;
 import com.lcwd.electronic.store.exceptions.ResourceNotFoundException;

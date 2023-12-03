@@ -1,7 +1,7 @@
 package com.lcwd.electronic.store.controllers;
 
-import com.lcwd.electronic.store.dtos.ApiResponse;
-import com.lcwd.electronic.store.dtos.PageableResponse;
+import com.lcwd.electronic.store.payload.ApiResponse;
+import com.lcwd.electronic.store.payload.PageableResponse;
 import com.lcwd.electronic.store.dtos.UserDto;
 import com.lcwd.electronic.store.helper.AppConstants;
 import com.lcwd.electronic.store.service.UserServiceI;
@@ -100,6 +100,7 @@ public class UserController {
         ApiResponse response = ApiResponse.builder()
                 .message(AppConstants.DELETED)
                 .success(true)
+                .status(HttpStatus.OK)
                 .build();
         log.info("Completed the Request for delete the user record by userId{}:", userId);
         return new ResponseEntity<>(response, HttpStatus.OK);

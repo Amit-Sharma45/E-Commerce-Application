@@ -1,6 +1,6 @@
 package com.lcwd.electronic.store.helper;
 
-import com.lcwd.electronic.store.dtos.PageableResponse;
+import com.lcwd.electronic.store.payload.PageableResponse;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
 

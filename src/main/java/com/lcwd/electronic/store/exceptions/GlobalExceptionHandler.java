@@ -1,6 +1,6 @@
 package com.lcwd.electronic.store.exceptions;
 
-import com.lcwd.electronic.store.dtos.ApiResponse;
+import com.lcwd.electronic.store.payload.ApiResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -23,7 +23,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<ApiResponse> ResourceNotFoundExceptionHandler(ResourceNotFoundException ex) {
         logger.info("Exceptions Handler invoked !!");
-        ApiResponse response = ApiResponse.builder().message(ex.getMessage()).success(true) .build();
+        ApiResponse response = ApiResponse.builder().message(ex.getMessage()).success(true).status(HttpStatus.NOT_FOUND).build();
         return new ResponseEntity<ApiResponse>(response, HttpStatus.NOT_FOUND);
     }
 
