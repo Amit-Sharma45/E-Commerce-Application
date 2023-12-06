@@ -5,7 +5,7 @@ import com.lcwd.electronic.store.payload.PageableResponse;
 
 public interface CategoryService {
 
-    //cerate
+    //create
     CategoryDto createCategory(CategoryDto categoryDto);
     //update
 
