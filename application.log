@@ -1,125 +1,85 @@
-2023-12-06 09:33:05,603 INFO  StartupInfoLogger:55 - [] Starting ElectronicStoreApplication using Java 17.0.5 on DESKTOP-J6LS9NN with PID 2860 (D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore\target\classes started by ACS in D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore)
-2023-12-06 09:33:05,618 INFO  SpringApplication:632 - [] No active profile set, falling back to 1 default profile: "default"
-2023-12-06 09:33:07,135 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-06 09:33:07,295 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 126 ms. Found 2 JPA repository interfaces.
-2023-12-06 09:33:08,956 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8484 (http)
-2023-12-06 09:33:08,974 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
-2023-12-06 09:33:08,975 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.82]
-2023-12-06 09:33:09,265 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
-2023-12-06 09:33:09,266 INFO  ServletWebServerApplicationContext:292 - [] Root WebApplicationContext: initialization completed in 3516 ms
-2023-12-06 09:33:09,640 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-06 09:33:09,764 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.15.Final
-2023-12-06 09:33:10,176 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-12-06 09:33:10,498 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
-2023-12-06 09:33:11,391 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
-2023-12-06 09:33:11,425 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2023-12-06 09:33:12,922 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-12-06 09:33:12,954 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-06 09:33:14,230 WARN  JpaBaseConfiguration$JpaWebConfiguration:223 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-06 09:33:14,587 WARN  AbstractApplicationContext:591 - [] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.lcwd.electronic.store.controllers.UserController#createUser(UserDto)
-to {POST [/users]}: There is already 'categoryController' bean method
-com.lcwd.electronic.store.controllers.CategoryController#createCategory(CategoryDto) mapped.
-2023-12-06 09:33:14,590 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-06 09:33:14,592 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
-2023-12-06 09:33:14,614 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
-2023-12-06 09:33:14,618 INFO  DirectJDKLog:173 - [] Stopping service [Tomcat]
-2023-12-06 09:33:14,636 INFO  ConditionEvaluationReportLoggingListener:136 - [] 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-12-06 09:33:14,670 ERROR SpringApplication:818 - [] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.lcwd.electronic.store.controllers.UserController#createUser(UserDto)
-to {POST [/users]}: There is already 'categoryController' bean method
-com.lcwd.electronic.store.controllers.CategoryController#createCategory(CategoryDto) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:921)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
-	at com.lcwd.electronic.store.ElectronicStoreApplication.main(ElectronicStoreApplication.java:10)
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.lcwd.electronic.store.controllers.UserController#createUser(UserDto)
-to {POST [/users]}: There is already 'categoryController' bean method
-com.lcwd.electronic.store.controllers.CategoryController#createCategory(CategoryDto) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
-	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
-	... 16 common frames omitted
-2023-12-06 09:39:50,030 INFO  StartupInfoLogger:55 - [] Starting ElectronicStoreApplication using Java 17.0.5 on DESKTOP-J6LS9NN with PID 9056 (D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore\target\classes started by ACS in D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore)
-2023-12-06 09:39:50,037 INFO  SpringApplication:632 - [] No active profile set, falling back to 1 default profile: "default"
-2023-12-06 09:39:51,487 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-06 09:39:51,631 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 111 ms. Found 2 JPA repository interfaces.
-2023-12-06 09:39:53,102 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8484 (http)
-2023-12-06 09:39:53,121 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
-2023-12-06 09:39:53,122 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.82]
-2023-12-06 09:39:53,373 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
-2023-12-06 09:39:53,373 INFO  ServletWebServerApplicationContext:292 - [] Root WebApplicationContext: initialization completed in 3222 ms
-2023-12-06 09:39:53,983 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-06 09:39:54,108 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.15.Final
-2023-12-06 09:39:54,413 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-12-06 09:39:54,608 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
-2023-12-06 09:39:55,336 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
-2023-12-06 09:39:55,373 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2023-12-06 09:39:56,756 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-12-06 09:39:56,770 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-06 09:39:57,920 WARN  JpaBaseConfiguration$JpaWebConfiguration:223 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-06 09:39:58,514 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8484 (http) with context path ''
-2023-12-06 09:39:58,529 INFO  StartupInfoLogger:61 - [] Started ElectronicStoreApplication in 9.366 seconds (JVM running for 10.197)
-2023-12-06 09:40:14,065 INFO  DirectJDKLog:173 - [] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-06 09:40:14,065 INFO  FrameworkServlet:525 - [] Initializing Servlet 'dispatcherServlet'
-2023-12-06 09:40:14,065 INFO  FrameworkServlet:547 - [] Completed initialization in 0 ms
-2023-12-06 09:40:14,508 INFO  CategoryController:36 - [] Entering the Request to create new Category
-2023-12-06 09:40:14,508 INFO  CategoryServiceImpl:34 - [] Initiating the dao call for save the category
-2023-12-06 09:40:14,994 INFO  CategoryServiceImpl:39 - [] Completed the dao call for save the category
-2023-12-06 09:40:15,010 INFO  CategoryController:38 - [] Completed the Request to create new Category
-2023-12-06 09:43:05,759 INFO  CategoryController:36 - [] Entering the Request to create new Category
-2023-12-06 09:43:05,759 INFO  CategoryServiceImpl:34 - [] Initiating the dao call for save the category
-2023-12-06 09:43:05,783 INFO  CategoryServiceImpl:39 - [] Completed the dao call for save the category
-2023-12-06 09:43:05,783 INFO  CategoryController:38 - [] Completed the Request to create new Category
-2023-12-06 09:57:58,614 WARN  HikariPool$HouseKeeper:788 - [] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m32s904ms471µs100ns).
-2023-12-06 09:58:59,179 INFO  CategoryController:36 - [] Entering the Request to create new Category
-2023-12-06 09:58:59,179 INFO  CategoryServiceImpl:34 - [] Initiating the dao call for save the category
-2023-12-06 09:58:59,195 INFO  CategoryServiceImpl:39 - [] Completed the dao call for save the category
-2023-12-06 09:58:59,195 INFO  CategoryController:38 - [] Completed the Request to create new Category
-2023-12-06 10:00:14,333 INFO  CategoryController:54 - [] Entering the Request to update the Category with categoryId9c78cb70-3a74-4ce9-9453-5d228700a174: 
-2023-12-06 10:00:14,337 INFO  CategoryServiceImpl:45 - [] Initiating the dao call for update the category with categoryId9c78cb70-3a74-4ce9-9453-5d228700a174: 
-2023-12-06 10:00:14,397 INFO  CategoryServiceImpl:53 - [] Completed the dao call for update the category with categoryId9c78cb70-3a74-4ce9-9453-5d228700a174: 
-2023-12-06 10:00:14,397 INFO  CategoryController:56 - [] Completed the Request to update the Category with categoryId9c78cb70-3a74-4ce9-9453-5d228700a174: 
-2023-12-06 10:01:34,447 INFO  CategoryController:112 - [] Entering the Request to get category with categoryId9c78cb70-3a74-4ce9-9453-5d228700a174: 
-2023-12-06 10:01:34,451 INFO  CategoryServiceImpl:78 - [] Initiating the dao call for get the category with categoryId9c78cb70-3a74-4ce9-9453-5d228700a174: 
-2023-12-06 10:01:34,461 INFO  CategoryServiceImpl:80 - [] Completed the dao call for get the category with categoryIdcom.lcwd.electronic.store.entities.Category@ea79090: 
-2023-12-06 10:01:34,461 INFO  CategoryController:114 - [] Completed the Request to get category with categoryId9c78cb70-3a74-4ce9-9453-5d228700a174: 
-2023-12-06 10:02:28,449 INFO  CategoryController:97 - [] Entering the Request to get All Categories
-2023-12-06 10:02:28,449 INFO  CategoryServiceImpl:67 - [] Initiating the dao call for get All categories
-2023-12-06 10:02:28,747 INFO  CategoryServiceImpl:72 - [] Completed the dao call for get All categories
-2023-12-06 10:02:28,747 INFO  CategoryController:99 - [] Completed the Request to get All Categories
-2023-12-06 10:04:42,308 INFO  CategoryController:69 - [] Entering the Request to delete the Category with categoryId9c78cb70-3a74-4ce9-9453-5d228700a174: 
-2023-12-06 10:04:42,308 INFO  CategoryServiceImpl:59 - [] Initiating the dao call for delete the category with categoryId9c78cb70-3a74-4ce9-9453-5d228700a174: 
-2023-12-06 10:04:42,341 INFO  CategoryServiceImpl:62 - [] Completed the dao call for delete the category with categoryId9c78cb70-3a74-4ce9-9453-5d228700a174: 
-2023-12-06 10:04:42,349 INFO  CategoryController:76 - [] Completed the Request to delete the Category with categoryId9c78cb70-3a74-4ce9-9453-5d228700a174: 
-2023-12-06 10:05:09,167 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-06 10:05:09,170 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
-2023-12-06 10:05:09,186 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-12-07 09:20:12,948 INFO  StartupInfoLogger:55 - [] Starting ElectronicStoreApplication using Java 17.0.5 on DESKTOP-J6LS9NN with PID 6528 (D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore\target\classes started by ACS in D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore)
+2023-12-07 09:20:12,968 INFO  SpringApplication:632 - [] No active profile set, falling back to 1 default profile: "default"
+2023-12-07 09:20:14,835 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-07 09:20:14,997 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 135 ms. Found 3 JPA repository interfaces.
+2023-12-07 09:20:16,807 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8484 (http)
+2023-12-07 09:20:16,846 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2023-12-07 09:20:16,847 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-12-07 09:20:17,157 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2023-12-07 09:20:17,160 INFO  ServletWebServerApplicationContext:292 - [] Root WebApplicationContext: initialization completed in 4033 ms
+2023-12-07 09:20:17,595 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-07 09:20:17,807 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-12-07 09:20:18,220 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-12-07 09:20:18,442 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-12-07 09:20:19,422 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-12-07 09:20:19,457 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-12-07 09:20:21,250 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-07 09:20:21,268 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 09:20:22,512 WARN  JpaBaseConfiguration$JpaWebConfiguration:223 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-07 09:20:23,155 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8484 (http) with context path ''
+2023-12-07 09:20:23,173 INFO  StartupInfoLogger:61 - [] Started ElectronicStoreApplication in 11.214 seconds (JVM running for 12.173)
+2023-12-07 09:25:02,331 INFO  DirectJDKLog:173 - [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-07 09:25:02,331 INFO  FrameworkServlet:525 - [] Initializing Servlet 'dispatcherServlet'
+2023-12-07 09:25:02,331 INFO  FrameworkServlet:547 - [] Completed initialization in 0 ms
+2023-12-07 09:25:02,387 INFO  ProductController:110 - [] Entering the Request to get all the products
+2023-12-07 09:25:02,388 INFO  ProductServiceImpl:78 - [] Initiating the dao call for get all products
+2023-12-07 09:25:02,656 INFO  ProductServiceImpl:82 - [] Completed the dao call for get all products
+2023-12-07 09:25:02,656 INFO  ProductController:112 - [] Completed the Request to get all the products
+2023-12-07 09:25:25,101 INFO  ProductController:35 - [] Entering the Request to create new Product
+2023-12-07 09:25:25,101 INFO  ProductServiceImpl:33 - [] Initiating the dao call for save the product
+2023-12-07 09:25:25,358 INFO  ProductServiceImpl:39 - [] Completed the dao call for save the product
+2023-12-07 09:25:25,363 INFO  ProductController:37 - [] Completed the Request to create new Product
+2023-12-07 09:34:57,633 INFO  ProductController:35 - [] Entering the Request to create new Product
+2023-12-07 09:34:57,639 INFO  ProductServiceImpl:33 - [] Initiating the dao call for save the product
+2023-12-07 09:34:57,655 INFO  ProductServiceImpl:39 - [] Completed the dao call for save the product
+2023-12-07 09:34:57,655 INFO  ProductController:37 - [] Completed the Request to create new Product
+2023-12-07 09:35:54,341 INFO  ProductController:35 - [] Entering the Request to create new Product
+2023-12-07 09:35:54,341 INFO  ProductServiceImpl:33 - [] Initiating the dao call for save the product
+2023-12-07 09:35:54,351 INFO  ProductServiceImpl:39 - [] Completed the dao call for save the product
+2023-12-07 09:35:54,358 INFO  ProductController:37 - [] Completed the Request to create new Product
+2023-12-07 09:37:42,700 INFO  ProductController:35 - [] Entering the Request to create new Product
+2023-12-07 09:37:42,701 INFO  ProductServiceImpl:33 - [] Initiating the dao call for save the product
+2023-12-07 09:37:42,710 INFO  ProductServiceImpl:39 - [] Completed the dao call for save the product
+2023-12-07 09:37:42,712 INFO  ProductController:37 - [] Completed the Request to create new Product
+2023-12-07 09:38:50,973 INFO  ProductController:35 - [] Entering the Request to create new Product
+2023-12-07 09:38:50,973 INFO  ProductServiceImpl:33 - [] Initiating the dao call for save the product
+2023-12-07 09:38:50,986 INFO  ProductServiceImpl:39 - [] Completed the dao call for save the product
+2023-12-07 09:38:50,986 INFO  ProductController:37 - [] Completed the Request to create new Product
+2023-12-07 09:41:28,586 INFO  ProductController:51 - [] Entering the Request to update the product with productIdfeec198a-b7f0-4147-97ef-a84a2a55ac67: 
+2023-12-07 09:41:28,587 INFO  ProductServiceImpl:45 - [] Initiating the dao call for update the product with productIdfeec198a-b7f0-4147-97ef-a84a2a55ac67: 
+2023-12-07 09:41:28,625 INFO  ProductServiceImpl:56 - [] Completed the dao call for update the product with productIdfeec198a-b7f0-4147-97ef-a84a2a55ac67: 
+2023-12-07 09:41:28,627 INFO  ProductController:53 - [] Completed the Request to update the product with productIdfeec198a-b7f0-4147-97ef-a84a2a55ac67: 
+2023-12-07 09:43:07,125 INFO  ProductController:87 - [] Entering the Request to get the product with productIdfeec198a-b7f0-4147-97ef-a84a2a55ac67: 
+2023-12-07 09:43:07,125 INFO  ProductServiceImpl:70 - [] Initiating the dao call for get the product with productIdfeec198a-b7f0-4147-97ef-a84a2a55ac67: 
+2023-12-07 09:43:07,131 INFO  ProductServiceImpl:72 - [] Completed the dao call for get the product with productIdfeec198a-b7f0-4147-97ef-a84a2a55ac67: 
+2023-12-07 09:43:07,131 INFO  ProductController:89 - [] Completed the Request to get the product with productIdfeec198a-b7f0-4147-97ef-a84a2a55ac67: 
+2023-12-07 09:43:54,325 INFO  ProductController:110 - [] Entering the Request to get all the products
+2023-12-07 09:43:54,325 INFO  ProductServiceImpl:78 - [] Initiating the dao call for get all products
+2023-12-07 09:43:54,361 INFO  ProductServiceImpl:82 - [] Completed the dao call for get all products
+2023-12-07 09:43:54,381 INFO  ProductController:112 - [] Completed the Request to get all the products
+2023-12-07 09:44:50,952 INFO  ProductController:110 - [] Entering the Request to get all the products
+2023-12-07 09:44:50,952 INFO  ProductServiceImpl:78 - [] Initiating the dao call for get all products
+2023-12-07 09:44:50,968 INFO  ProductServiceImpl:82 - [] Completed the dao call for get all products
+2023-12-07 09:44:50,972 INFO  ProductController:112 - [] Completed the Request to get all the products
+2023-12-07 09:45:36,326 INFO  ProductController:110 - [] Entering the Request to get all the products
+2023-12-07 09:45:36,329 INFO  ProductServiceImpl:78 - [] Initiating the dao call for get all products
+2023-12-07 09:45:36,358 INFO  ProductServiceImpl:82 - [] Completed the dao call for get all products
+2023-12-07 09:45:36,383 INFO  ProductController:112 - [] Completed the Request to get all the products
+2023-12-07 09:46:31,405 INFO  ProductController:133 - [] Entering the Request to get all live products
+2023-12-07 09:46:31,405 INFO  ProductServiceImpl:88 - [] Initiating the dao call for get all live products
+2023-12-07 09:46:31,436 INFO  ProductServiceImpl:92 - [] Completed the dao call for get all live products
+2023-12-07 09:46:31,441 INFO  ProductController:135 - [] Completed the Request to get all live products
+2023-12-07 09:47:50,160 INFO  ProductController:158 - [] Entering the Request to search the products by title
+2023-12-07 09:47:50,160 INFO  ProductServiceImpl:98 - [] Initiating the dao call for search the products by title
+2023-12-07 09:47:50,209 INFO  ProductServiceImpl:102 - [] Completed the dao call for search the products by title
+2023-12-07 09:47:50,209 INFO  ProductController:160 - [] Completed the Request to search the products by title
+2023-12-07 09:49:16,428 INFO  ProductController:66 - [] Entering the Request to delete the product with productIdfeec198a-b7f0-4147-97ef-a84a2a55ac67: 
+2023-12-07 09:49:16,428 INFO  ProductServiceImpl:62 - [] Initiating the dao call for delete the product with productIdfeec198a-b7f0-4147-97ef-a84a2a55ac67: 
+2023-12-07 09:49:16,450 INFO  ProductServiceImpl:65 - [] Completed the dao call for delete the product with productIdfeec198a-b7f0-4147-97ef-a84a2a55ac67: 
+2023-12-07 09:49:16,454 INFO  ProductController:73 - [] Completed the Request to delete the product with productIdfeec198a-b7f0-4147-97ef-a84a2a55ac67: 
+2023-12-07 09:49:20,793 INFO  ProductController:66 - [] Entering the Request to delete the product with productIdfeec198a-b7f0-4147-97ef-a84a2a55ac67: 
+2023-12-07 09:49:20,795 INFO  ProductServiceImpl:62 - [] Initiating the dao call for delete the product with productIdfeec198a-b7f0-4147-97ef-a84a2a55ac67: 
+2023-12-07 09:49:20,813 INFO  GlobalExceptionHandler:25 - [] Exceptions Handler invoked !!
+2023-12-07 09:49:36,873 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07 09:49:36,879 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-12-07 09:49:36,898 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
