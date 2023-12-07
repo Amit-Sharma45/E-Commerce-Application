@@ -1,25 +1,39 @@
 package com.lcwd.electronic.store.controllers;
 
+import com.lcwd.electronic.store.helper.UrlConstants;
 import com.lcwd.electronic.store.payload.ApiResponse;
+import com.lcwd.electronic.store.payload.ImageResponse;
 import com.lcwd.electronic.store.payload.PageableResponse;
 import com.lcwd.electronic.store.dtos.UserDto;
 import com.lcwd.electronic.store.helper.AppConstants;
+import com.lcwd.electronic.store.service.ImageService;
 import com.lcwd.electronic.store.service.UserServiceI;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping(UrlConstants.USER_BASE_URL)
 @Slf4j
 public class UserController {
     @Autowired
     private UserServiceI userServiceI;
+    @Autowired
+    private ImageService imageService;
+    @Value("${user.profile.image.path}")
+    private String imageUploadPath;
 
     /**
      * @param userDto
@@ -98,7 +112,7 @@ public class UserController {
         log.info("Entering the Request for delete the user record by userId{}: ", userId);
         this.userServiceI.deleteUser(userId);
         ApiResponse response = ApiResponse.builder()
-                .message(AppConstants.DELETED)
+                .message(AppConstants.USER_DELETED)
                 .success(true)
                 .status(HttpStatus.OK)
                 .build();
@@ -108,7 +122,7 @@ public class UserController {
 
     /**
      * @param email
-     * @return
+     * @return UserDto
      * @author AMIT
      * @apiNote getUser By email
      * @since 1.0
@@ -123,7 +137,7 @@ public class UserController {
 
     /**
      * @param keyword
-     * @return
+     * @return List of UserDto
      * @author AMIT
      * @apiNote search user by keyword
      * @since 1.0
@@ -135,4 +149,26 @@ public class UserController {
         log.info("Competed the Request for search the user by keyword");
         return new ResponseEntity<>(users, HttpStatus.OK);
     }
+
+    @PostMapping("/image/{userId}")
+    public ResponseEntity<ImageResponse> uploadUserImage(@RequestParam("userImage") MultipartFile image, @PathVariable String userId) throws IOException {
+        String imageName = imageService.uploadImage(image, imageUploadPath);
+        UserDto user = userServiceI.getUserById(userId);
+        user.setImageName(imageName);
+        UserDto userDto = userServiceI.updateUser(user, userId);
+
+        ImageResponse imageResponse = ImageResponse.builder().imageName(imageName).success(true).message("image uploaded successfully !!").status(HttpStatus.CREATED).build();
+
+        return new ResponseEntity<>(imageResponse, HttpStatus.CREATED);
+    }
+
+    @GetMapping("/image/{userId}")
+    public void serveUserImage(@PathVariable String userId, HttpServletResponse response) throws IOException {
+        UserDto user = userServiceI.getUserById(userId);
+        log.info("user image name : {} ", user.getImageName());
+        InputStream resource = imageService.getResource(imageUploadPath, user.getImageName());
+        response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+        StreamUtils.copy(resource, response.getOutputStream());
+    }
+
 }

@@ -12,11 +12,18 @@ import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -30,6 +37,9 @@ public class UserServiceImpl implements UserServiceI {
 
     @Autowired
     private ModelMapper modelMapper;
+
+    @Value("${user.profile.image.path}")
+    private String imagePath;
 
     @Override
     public UserDto createUser(UserDto userDto) {
@@ -71,11 +81,13 @@ public class UserServiceImpl implements UserServiceI {
     public PageableResponse<UserDto> getAllUsers(Integer pageNumber, Integer pageSize, String sortBy, String sortDir) {
         logger.info("Initiating the dao call for get All records of Users");
 
-        Pageable pageable = PageRequest.of(pageNumber, pageSize);
+        Sort sort = (sortDir.equalsIgnoreCase("desc")) ? (Sort.by(sortBy).descending()) : (Sort.by(sortBy).ascending());
+
+        Pageable pageable = PageRequest.of(pageNumber, pageSize, sort);
 
         Page<User> page = this.userRepo.findAll(pageable);
 
-        List<User> users = page.getContent();
+//        List<User> users = page.getContent();
 
 //        List<UserDto> userDtos = users.stream().map(user -> modelMapper.map(user, UserDto.class)).collect(Collectors.toList());
         PageableResponse<UserDto> response = Helper.getPageableResponse(page, UserDto.class);
@@ -88,8 +100,20 @@ public class UserServiceImpl implements UserServiceI {
     public void deleteUser(String userId) {
         logger.info("Initiating the dao call for delete the user record by userId{}:", userId);
         User user = this.userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(AppConstants.NOT_FOUND));
-        logger.info("Completed the dao call for delete the user record by userId{}:", userId);
+
+        String fullPath = imagePath + user.getImageName();
+        try {
+            Path path = Paths.get(fullPath);
+            Files.delete(path);
+        } catch (NoSuchFileException e) {
+            logger.info("user image not found in folder");
+            e.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
         this.userRepo.delete(user);
+        logger.info("Completed the dao call for delete the user record by userId{}:", userId);
     }
 
     @Override
