@@ -150,25 +150,45 @@ public class UserController {
         return new ResponseEntity<>(users, HttpStatus.OK);
     }
 
+    /**
+     * @param image
+     * @param userId
+     * @return ImageResponse
+     * @throws IOException
+     * @apiNote To upload user Image
+     * @author AMIT
+     * @since 1.0
+     */
     @PostMapping("/image/{userId}")
     public ResponseEntity<ImageResponse> uploadUserImage(@RequestParam("userImage") MultipartFile image, @PathVariable String userId) throws IOException {
+        log.info("Entering the Request for upload user Image for userId{}: ", userId);
         String imageName = imageService.uploadImage(image, imageUploadPath);
         UserDto user = userServiceI.getUserById(userId);
         user.setImageName(imageName);
         UserDto userDto = userServiceI.updateUser(user, userId);
 
         ImageResponse imageResponse = ImageResponse.builder().imageName(imageName).success(true).message("image uploaded successfully !!").status(HttpStatus.CREATED).build();
-
+        log.info("Completed the Request for upload user Image for userId{}: ", userId);
         return new ResponseEntity<>(imageResponse, HttpStatus.CREATED);
     }
 
+    /**
+     * @param userId
+     * @param response
+     * @throws IOException
+     * @apiNote To get or serve the user image
+     * @author AMIT
+     * @since 1.0
+     */
     @GetMapping("/image/{userId}")
     public void serveUserImage(@PathVariable String userId, HttpServletResponse response) throws IOException {
+        log.info("Entering the Request for get user Image for userId{}: ", userId);
         UserDto user = userServiceI.getUserById(userId);
         log.info("user image name : {} ", user.getImageName());
         InputStream resource = imageService.getResource(imageUploadPath, user.getImageName());
         response.setContentType(MediaType.IMAGE_JPEG_VALUE);
         StreamUtils.copy(resource, response.getOutputStream());
+        log.info("Completed the Request for get user Image for userId{}: ", userId);
     }
 
 }

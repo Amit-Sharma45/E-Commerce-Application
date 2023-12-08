@@ -11,12 +11,18 @@ import com.lcwd.electronic.store.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Date;
 import java.util.UUID;
 
@@ -27,6 +33,9 @@ public class ProductServiceImpl implements ProductService {
     private ProductRepository productRepository;
     @Autowired
     private ModelMapper modelMapper;
+
+    @Value("${product.image.path}")
+    private String productImagePath;
 
     @Override
     public ProductDto create(ProductDto productDto) {
@@ -51,6 +60,7 @@ public class ProductServiceImpl implements ProductService {
         product.setQuantity(productDto.getQuantity());
         product.setLive(productDto.isLive());
         product.setStock(productDto.isStock());
+        product.setProductImageName(productDto.getProductImageName());
 
         Product updatedProduct = productRepository.save(product);
         log.info("Completed the dao call for update the product with productId{}: ", productId);
@@ -61,6 +71,16 @@ public class ProductServiceImpl implements ProductService {
     public void delete(String productId) {
         log.info("Initiating the dao call for delete the product with productId{}: ", productId);
         Product product = productRepository.findById(productId).orElseThrow(() -> new ResourceNotFoundException(AppConstants.NOT_FOUND));
+        String fullPath = productImagePath + product.getProductImageName();
+        try {
+            Path path = Paths.get(fullPath);
+            Files.delete(path);
+        } catch (NoSuchFileException e) {
+            log.info("product image not found in folder");
+            e.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
         productRepository.delete(product);
         log.info("Completed the dao call for delete the product with productId{}: ", productId);
     }
