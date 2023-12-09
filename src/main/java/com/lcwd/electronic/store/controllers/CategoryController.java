@@ -1,11 +1,13 @@
 package com.lcwd.electronic.store.controllers;
 
 import com.lcwd.electronic.store.dtos.CategoryDto;
+import com.lcwd.electronic.store.dtos.ProductDto;
 import com.lcwd.electronic.store.helper.AppConstants;
 import com.lcwd.electronic.store.helper.UrlConstants;
 import com.lcwd.electronic.store.payload.ApiResponse;
 import com.lcwd.electronic.store.payload.PageableResponse;
 import com.lcwd.electronic.store.service.CategoryService;
+import com.lcwd.electronic.store.service.ProductService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,9 @@ public class CategoryController {
     Logger logger = LoggerFactory.getLogger(CategoryController.class);
     @Autowired
     private CategoryService categoryService;
+
+    @Autowired
+    private ProductService productService;
 
     /**
      * @param categoryDto
@@ -114,4 +119,71 @@ public class CategoryController {
         logger.info("Completed the Request to get category with categoryId{}: ", categoryId);
         return new ResponseEntity<>(category, HttpStatus.OK);
     }
+
+    /**
+     * @param categoryId
+     * @param productDto
+     * @return ProductDto
+     * @apiNote To create Product with category
+     * @author AMIT
+     * @since 1.0
+     */
+    @PostMapping("/{categoryId}/products")
+    public ResponseEntity<ProductDto> createProductWithCategory(
+            @PathVariable("categoryId") String categoryId,
+            @RequestBody ProductDto productDto
+    ) {
+        logger.info("Entering the Request to create product with category of categoryId{}: ", categoryId);
+        ProductDto productWithCategory = productService.createWithCategory(productDto, categoryId);
+        logger.info("Completed the Request to create product with category of categoryId{}: ", categoryId);
+        return new ResponseEntity<>(productWithCategory, HttpStatus.CREATED);
+
+    }
+
+    /**
+     * @param categoryId
+     * @param productId
+     * @return ProductDto
+     * @apiNote To update the category of product
+     * @author AMIT
+     * @since 1.0
+     */
+    @PutMapping("/{categoryId}/products/{productId}")
+    public ResponseEntity<ProductDto> updateCategoryOfProduct(
+            @PathVariable String categoryId,
+            @PathVariable String productId
+    ) {
+        logger.info("Entering the Request to update category of product with productId{}: ", productId);
+        ProductDto productDto = productService.updateCategory(productId, categoryId);
+        logger.info("Completed the Request to update category of product with productId{}: ", productId);
+        return new ResponseEntity<>(productDto, HttpStatus.OK);
+
+    }
+
+    /**
+     * @param categoryId
+     * @param pageNumber
+     * @param pageSize
+     * @param sortBy
+     * @param sortDir
+     * @return PageableResponse of ProductDto
+     * @apiNote To get all products of category
+     * @author AMIT
+     * @since 1.0
+     */
+    @GetMapping("/{categoryId}/products")
+    public ResponseEntity<PageableResponse<ProductDto>> getProductOfCategory(
+            @PathVariable String categoryId,
+            @RequestParam(defaultValue = AppConstants.PAGE_NUMBER, required = false) Integer pageNumber,
+            @RequestParam(defaultValue = AppConstants.PAGE_SIZE, required = false) Integer pageSize,
+            @RequestParam(defaultValue = AppConstants.PRODUCT_SORT_BY, required = false) String sortBy,
+            @RequestParam(defaultValue = AppConstants.SORT_DIR, required = false) String sortDir
+    ) {
+        logger.info("Entering the Request to get products of category with categoryId{}: ", categoryId);
+        PageableResponse<ProductDto> response = productService.getAllProductsOfCategory(categoryId, pageNumber, pageSize, sortBy, sortDir);
+        logger.info("Completed the Request to get products of category with categoryId{}: ", categoryId);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+
 }

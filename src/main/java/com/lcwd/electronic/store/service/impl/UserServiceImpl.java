@@ -56,7 +56,7 @@ public class UserServiceImpl implements UserServiceI {
     @Override
     public UserDto updateUser(UserDto userDto, String userId) {
         logger.info("Initiating the dao call for update the user data with userId{}: ", userId);
-        User user = this.userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(AppConstants.NOT_FOUND));
+        User user = this.userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(AppConstants.USER_NOT_FOUND));
         user.setName(userDto.getName());
 //      email
         user.setPassword(userDto.getPassword());
@@ -72,7 +72,7 @@ public class UserServiceImpl implements UserServiceI {
     @Override
     public UserDto getUserById(String userId) {
         logger.info("Initiating the dao call for get single user data with userId{}: ", userId);
-        User user = this.userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(AppConstants.NOT_FOUND));
+        User user = this.userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(AppConstants.USER_NOT_FOUND));
         logger.info("Completed the dao call for get single user data with userId{}: ", userId);
         return modelMapper.map(user, UserDto.class);
     }
@@ -99,7 +99,7 @@ public class UserServiceImpl implements UserServiceI {
     @Override
     public void deleteUser(String userId) {
         logger.info("Initiating the dao call for delete the user record by userId{}:", userId);
-        User user = this.userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(AppConstants.NOT_FOUND));
+        User user = this.userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(AppConstants.USER_NOT_FOUND));
 
         String fullPath = imagePath + user.getImageName();
         try {
@@ -119,7 +119,7 @@ public class UserServiceImpl implements UserServiceI {
     @Override
     public UserDto getUserByEmail(String email) {
         logger.info("Initiating the dao call for get the user record by email");
-        User user = this.userRepo.findByEmail(email).orElseThrow(() -> new ResourceNotFoundException("User not found with given email !!"));
+        User user = this.userRepo.findByEmail(email).orElseThrow(() -> new ResourceNotFoundException(AppConstants.NOT_FOUND_WITH_EMAIL));
         logger.info("Completed the dao call for get the user record by email");
         return modelMapper.map(user, UserDto.class);
     }

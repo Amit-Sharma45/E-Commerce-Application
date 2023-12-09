@@ -1,7 +1,11 @@
 package com.lcwd.electronic.store.helper;
 
 public class AppConstants {
-    public static final String NOT_FOUND = "Record Not Found with given id";
+    public static final String USER_NOT_FOUND = "User Not Found with given id";
+    public static final String NOT_FOUND_WITH_EMAIL = "User not found with given email !!";
+
+    public static final String PRODUCT_NOT_FOUND = "Product Not Found with given id";
+    public static final String CATEGORY_NOT_FOUND = "Category Not Found with given id";
     public static final String USER_DELETED = "User Deleted Successfully !!";
     public static final String CATEGORY_DELETED = "Category Deleted Successfully !!";
     public static final String PRODUCT_DELETED = "Product Deleted Successfully !!";
