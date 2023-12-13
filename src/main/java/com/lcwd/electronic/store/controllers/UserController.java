@@ -7,7 +7,7 @@ import com.lcwd.electronic.store.payload.PageableResponse;
 import com.lcwd.electronic.store.dtos.UserDto;
 import com.lcwd.electronic.store.helper.AppConstants;
 import com.lcwd.electronic.store.service.ImageService;
-import com.lcwd.electronic.store.service.UserServiceI;
+import com.lcwd.electronic.store.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -29,7 +29,7 @@ import java.util.List;
 @Slf4j
 public class UserController {
     @Autowired
-    private UserServiceI userServiceI;
+    private UserService userServiceI;
     @Autowired
     private ImageService imageService;
     @Value("${user.profile.image.path}")

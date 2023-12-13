@@ -5,7 +5,7 @@ import com.lcwd.electronic.store.dtos.UserDto;
 
 import java.util.List;
 
-public interface UserServiceI {
+public interface UserService {
 
     UserDto createUser(UserDto userDto);
 
