@@ -1,13 +1,14 @@
 package com.lcwd.electronic.store.payload;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
 @Setter
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class PageableResponse<T> {
     private List<T> content;
     private Integer pageNumber;
