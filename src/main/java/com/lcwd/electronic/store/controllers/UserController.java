@@ -111,7 +111,7 @@ public class UserController {
     public ResponseEntity<ApiResponse> deleteUser(@PathVariable String userId) {
         log.info("Entering the Request for delete the user record by userId{}: ", userId);
         this.userServiceI.deleteUser(userId);
-        ApiResponse response = ApiResponse.builder()
+            ApiResponse response = ApiResponse.builder()
                 .message(AppConstants.USER_DELETED)
                 .success(true)
                 .status(HttpStatus.OK)

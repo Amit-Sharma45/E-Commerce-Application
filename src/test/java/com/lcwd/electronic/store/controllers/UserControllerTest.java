@@ -3,7 +3,6 @@ package com.lcwd.electronic.store.controllers;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lcwd.electronic.store.dtos.UserDto;
 import com.lcwd.electronic.store.entities.User;
-import com.lcwd.electronic.store.payload.ApiResponse;
 import com.lcwd.electronic.store.payload.PageableResponse;
 import com.lcwd.electronic.store.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -125,16 +123,21 @@ public class UserControllerTest {
                 .andExpect(status().isOk());
     }
 
-//    @Test
-//    public void deleteUserTest(){
-//        String userId="am3464N";
+    @Test
+    public void deleteUserTest() throws Exception {
+        String userId = "am3464N";
 //        ApiResponse apiResponse=ApiResponse.builder().message("User Deleted successfully !!").status(HttpStatus.OK).success(true).build();
-//
-//
-//    }
+        UserDto userDto = modelMapper.map(user, UserDto.class);
+        Mockito.doNothing().when(userService).deleteUser(userId);
+        mockMvc.perform(
+                        MockMvcRequestBuilders.delete("/users/" + userId))
+                .andDo(print())
+                .andExpect(status().isOk());
+    }
+
     @Test
     public void getUserByEmailTest() throws Exception {
-        String email="amit45@gmail.com";
+        String email = "amit45@gmail.com";
         UserDto userDto = modelMapper.map(user, UserDto.class);
 
         Mockito.when(userService.getUserByEmail(email)).thenReturn(userDto);
@@ -148,6 +151,13 @@ public class UserControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name").exists());
     }
+
+//    search user
+
+//    upload user image
+
+//    serve user image
+
 
     private String convertObjectToJsonString(Object user) {
         try {
