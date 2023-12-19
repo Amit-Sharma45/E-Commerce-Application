@@ -18,6 +18,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import java.util.Arrays;
+import java.util.List;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -152,8 +153,25 @@ public class UserControllerTest {
                 .andExpect(jsonPath("$.name").exists());
     }
 
-//    search user
+    //    search user
+    @Test
+    public void searchUserTest() throws Exception {
+        UserDto obj1 = UserDto.builder().name("Amit Kumar").email("amit@gmail.com").about("I am a java Developer").gender("male").password("abs").imageName("default.png").build();
+        UserDto obj2 = UserDto.builder().name("Dinesh Kumar").email("denny@gmail.com").about("I am a java Developer").gender("male").password("abs").imageName("default.png").build();
+        UserDto obj3 = UserDto.builder().name("Sahil Kumar").email("sahil@gmail.com").about("I am a java Developer").gender("male").password("abs").imageName("default.png").build();
+        UserDto obj4 = UserDto.builder().name("Aakash").email("aakash@gmail.com").about("I am a java Developer").gender("male").password("abs").imageName("default.png").build();
+        List<UserDto> dtoList = Arrays.asList(obj1, obj2, obj3);
 
+        String keyword = "Kumar";
+        Mockito.when(userService.searchUser(Mockito.anyString())).thenReturn(dtoList);
+
+        mockMvc.perform(
+                        MockMvcRequestBuilders.get("/users/search/" + keyword)
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk());
+    }
 //    upload user image
 
 //    serve user image
