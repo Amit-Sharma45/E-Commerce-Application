@@ -148,3 +148,191 @@
 2023-12-19 11:43:56,243 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-12-19 11:43:56,247 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
 2023-12-19 11:43:56,271 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-12-19 12:16:30,847 INFO  StartupInfoLogger:55 - [] Starting ProductServiceTest using Java 17.0.5 on DESKTOP-J6LS9NN with PID 13544 (started by ACS in D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore)
+2023-12-19 12:16:30,851 INFO  SpringApplication:632 - [] No active profile set, falling back to 1 default profile: "default"
+2023-12-19 12:16:31,755 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-19 12:16:31,839 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 72 ms. Found 3 JPA repository interfaces.
+2023-12-19 12:16:33,117 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-19 12:16:33,178 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-12-19 12:16:33,227 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-12-19 12:16:33,455 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-12-19 12:16:33,828 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-12-19 12:16:33,844 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-12-19 12:16:34,747 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-19 12:16:34,755 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 12:16:35,924 WARN  JpaBaseConfiguration$JpaWebConfiguration:223 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19 12:16:36,670 INFO  StartupInfoLogger:61 - [] Started ProductServiceTest in 6.355 seconds (JVM running for 7.638)
+2023-12-19 12:16:36,766 INFO  ProductServiceImpl:46 - [] Initiating the dao call for save the product
+2023-12-19 12:16:36,775 INFO  ProductServiceImpl:52 - [] Completed the dao call for save the product
+2023-12-19 12:16:36,804 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 12:16:36,807 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-12-19 12:16:36,820 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-12-19 12:33:55,817 INFO  StartupInfoLogger:55 - [] Starting ProductServiceTest using Java 17.0.5 on DESKTOP-J6LS9NN with PID 6784 (started by ACS in D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore)
+2023-12-19 12:33:55,820 INFO  SpringApplication:632 - [] No active profile set, falling back to 1 default profile: "default"
+2023-12-19 12:33:56,728 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-19 12:33:56,897 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 159 ms. Found 3 JPA repository interfaces.
+2023-12-19 12:33:58,367 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-19 12:33:58,483 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-12-19 12:33:58,567 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-12-19 12:33:58,745 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-12-19 12:33:59,102 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-12-19 12:33:59,120 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-12-19 12:33:59,843 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-19 12:33:59,852 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 12:34:00,773 WARN  JpaBaseConfiguration$JpaWebConfiguration:223 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19 12:34:01,831 INFO  StartupInfoLogger:61 - [] Started ProductServiceTest in 6.439 seconds (JVM running for 7.901)
+2023-12-19 12:34:01,909 INFO  ProductServiceImpl:58 - [] Initiating the dao call for update the product with productIdam343n: 
+2023-12-19 12:34:01,914 INFO  ProductServiceImpl:70 - [] Completed the dao call for update the product with productIdam343n: 
+2023-12-19 12:34:01,983 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 12:34:01,986 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-12-19 12:34:01,996 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-12-19 13:06:12,992 INFO  StartupInfoLogger:55 - [] Starting ProductServiceTest using Java 17.0.5 on DESKTOP-J6LS9NN with PID 7904 (started by ACS in D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore)
+2023-12-19 13:06:12,996 INFO  SpringApplication:632 - [] No active profile set, falling back to 1 default profile: "default"
+2023-12-19 13:06:13,934 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-19 13:06:14,021 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 75 ms. Found 3 JPA repository interfaces.
+2023-12-19 13:06:15,211 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-19 13:06:15,280 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-12-19 13:06:15,328 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-12-19 13:06:15,544 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-12-19 13:06:15,891 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-12-19 13:06:15,911 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-12-19 13:06:16,644 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-19 13:06:16,652 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 13:06:17,466 WARN  JpaBaseConfiguration$JpaWebConfiguration:223 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19 13:06:18,186 INFO  StartupInfoLogger:61 - [] Started ProductServiceTest in 5.578 seconds (JVM running for 6.963)
+2023-12-19 13:06:18,247 INFO  ProductServiceImpl:76 - [] Initiating the dao call for delete the product with productIdam345n: 
+2023-12-19 13:06:18,251 INFO  ProductServiceImpl:83 - [] product image not found in folder
+2023-12-19 13:06:18,253 INFO  ProductServiceImpl:89 - [] Completed the dao call for delete the product with productIdam345n: 
+2023-12-19 13:06:18,288 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 13:06:18,291 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-12-19 13:06:18,303 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-12-19 13:06:57,227 INFO  StartupInfoLogger:55 - [] Starting UserServiceTest using Java 17.0.5 on DESKTOP-J6LS9NN with PID 812 (started by ACS in D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore)
+2023-12-19 13:06:57,230 INFO  SpringApplication:632 - [] No active profile set, falling back to 1 default profile: "default"
+2023-12-19 13:06:58,137 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-19 13:06:58,223 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 74 ms. Found 3 JPA repository interfaces.
+2023-12-19 13:06:59,403 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-19 13:06:59,458 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-12-19 13:06:59,511 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-12-19 13:06:59,710 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-12-19 13:07:00,066 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-12-19 13:07:00,088 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-12-19 13:07:00,780 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-19 13:07:00,789 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 13:07:01,557 WARN  JpaBaseConfiguration$JpaWebConfiguration:223 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19 13:07:02,231 INFO  StartupInfoLogger:61 - [] Started UserServiceTest in 5.513 seconds (JVM running for 6.923)
+2023-12-19 13:07:02,287 INFO  UserServiceImpl:101 - [] Initiating the dao call for delete the user record by userIdan445g:
+2023-12-19 13:07:02,294 INFO  UserServiceImpl:109 - [] user image not found in folder
+2023-12-19 13:07:02,297 INFO  UserServiceImpl:116 - [] Completed the dao call for delete the user record by userIdan445g:
+2023-12-19 13:07:02,331 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 13:07:02,333 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-12-19 13:07:02,345 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-12-19 14:10:18,865 INFO  StartupInfoLogger:55 - [] Starting ProductServiceTest using Java 17.0.5 on DESKTOP-J6LS9NN with PID 7600 (started by ACS in D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore)
+2023-12-19 14:10:18,869 INFO  SpringApplication:632 - [] No active profile set, falling back to 1 default profile: "default"
+2023-12-19 14:10:19,834 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-19 14:10:19,920 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 75 ms. Found 3 JPA repository interfaces.
+2023-12-19 14:10:21,114 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-19 14:10:21,182 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-12-19 14:10:21,234 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-12-19 14:10:21,459 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-12-19 14:10:21,838 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-12-19 14:10:21,855 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-12-19 14:10:22,578 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-19 14:10:22,588 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 14:10:23,650 WARN  JpaBaseConfiguration$JpaWebConfiguration:223 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19 14:10:24,364 INFO  StartupInfoLogger:61 - [] Started ProductServiceTest in 6.026 seconds (JVM running for 7.522)
+2023-12-19 14:10:24,419 INFO  ProductServiceImpl:94 - [] Initiating the dao call for get the product with productIdam553n: 
+2023-12-19 14:10:24,423 INFO  ProductServiceImpl:96 - [] Completed the dao call for get the product with productIdam553n: 
+2023-12-19 14:10:24,491 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 14:10:24,493 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-12-19 14:10:24,504 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-12-19 14:30:49,248 INFO  StartupInfoLogger:55 - [] Starting ProductServiceTest using Java 17.0.5 on DESKTOP-J6LS9NN with PID 10360 (started by ACS in D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore)
+2023-12-19 14:30:49,252 INFO  SpringApplication:632 - [] No active profile set, falling back to 1 default profile: "default"
+2023-12-19 14:30:50,108 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-19 14:30:50,194 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 76 ms. Found 3 JPA repository interfaces.
+2023-12-19 14:30:51,323 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-19 14:30:51,380 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-12-19 14:30:51,427 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-12-19 14:30:51,632 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-12-19 14:30:51,970 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-12-19 14:30:51,989 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-12-19 14:30:52,722 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-19 14:30:52,730 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 14:30:53,640 WARN  JpaBaseConfiguration$JpaWebConfiguration:223 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19 14:30:54,636 INFO  StartupInfoLogger:61 - [] Started ProductServiceTest in 5.779 seconds (JVM running for 7.07)
+2023-12-19 14:30:54,702 INFO  ProductServiceImpl:102 - [] Initiating the dao call for get all products
+2023-12-19 14:30:54,711 INFO  ProductServiceImpl:106 - [] Completed the dao call for get all products
+2023-12-19 14:30:54,840 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 14:30:54,842 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-12-19 14:30:54,862 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-12-19 15:31:14,515 INFO  StartupInfoLogger:55 - [] Starting ProductServiceTest using Java 17.0.5 on DESKTOP-J6LS9NN with PID 4560 (started by ACS in D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore)
+2023-12-19 15:31:14,525 INFO  SpringApplication:632 - [] No active profile set, falling back to 1 default profile: "default"
+2023-12-19 15:31:16,451 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-19 15:31:16,630 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 155 ms. Found 3 JPA repository interfaces.
+2023-12-19 15:31:19,521 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-19 15:31:19,658 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-12-19 15:31:19,772 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-12-19 15:31:20,142 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-12-19 15:31:21,060 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-12-19 15:31:21,100 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-12-19 15:31:22,959 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-19 15:31:22,984 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 15:31:24,989 WARN  JpaBaseConfiguration$JpaWebConfiguration:223 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19 15:31:26,406 INFO  StartupInfoLogger:61 - [] Started ProductServiceTest in 12.881 seconds (JVM running for 14.978)
+2023-12-19 15:31:26,503 INFO  ProductServiceImpl:112 - [] Initiating the dao call for get all live products
+2023-12-19 15:31:26,510 INFO  ProductServiceImpl:116 - [] Completed the dao call for get all live products
+2023-12-19 15:31:26,918 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 15:31:26,920 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-12-19 15:31:26,947 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-12-19 15:37:51,270 INFO  StartupInfoLogger:55 - [] Starting ProductServiceTest using Java 17.0.5 on DESKTOP-J6LS9NN with PID 15064 (started by ACS in D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore)
+2023-12-19 15:37:51,280 INFO  SpringApplication:632 - [] No active profile set, falling back to 1 default profile: "default"
+2023-12-19 15:37:53,552 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-19 15:37:53,749 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 179 ms. Found 3 JPA repository interfaces.
+2023-12-19 15:37:56,305 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-19 15:37:56,433 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-12-19 15:37:56,524 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-12-19 15:37:56,938 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-12-19 15:37:58,136 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-12-19 15:37:58,264 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-12-19 15:37:59,767 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-19 15:37:59,786 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 15:38:01,155 WARN  JpaBaseConfiguration$JpaWebConfiguration:223 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19 15:38:02,154 INFO  StartupInfoLogger:61 - [] Started ProductServiceTest in 11.853 seconds (JVM running for 13.821)
+2023-12-19 15:38:02,428 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 15:38:02,439 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-12-19 15:38:02,469 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-12-19 15:39:35,453 INFO  StartupInfoLogger:55 - [] Starting ProductServiceTest using Java 17.0.5 on DESKTOP-J6LS9NN with PID 13184 (started by ACS in D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore)
+2023-12-19 15:39:35,460 INFO  SpringApplication:632 - [] No active profile set, falling back to 1 default profile: "default"
+2023-12-19 15:39:37,155 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-19 15:39:37,292 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 118 ms. Found 3 JPA repository interfaces.
+2023-12-19 15:39:39,420 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-19 15:39:39,535 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-12-19 15:39:39,603 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-12-19 15:39:39,970 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-12-19 15:39:40,731 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-12-19 15:39:40,764 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-12-19 15:39:42,526 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-19 15:39:42,541 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 15:39:44,126 WARN  JpaBaseConfiguration$JpaWebConfiguration:223 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19 15:39:45,136 INFO  StartupInfoLogger:61 - [] Started ProductServiceTest in 10.505 seconds (JVM running for 12.739)
+2023-12-19 15:39:45,275 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 15:39:45,278 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-12-19 15:39:45,301 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-12-19 15:40:20,412 INFO  StartupInfoLogger:55 - [] Starting ProductServiceTest using Java 17.0.5 on DESKTOP-J6LS9NN with PID 10480 (started by ACS in D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore)
+2023-12-19 15:40:20,419 INFO  SpringApplication:632 - [] No active profile set, falling back to 1 default profile: "default"
+2023-12-19 15:40:22,003 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-19 15:40:22,134 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 117 ms. Found 3 JPA repository interfaces.
+2023-12-19 15:40:24,434 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-19 15:40:24,544 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-12-19 15:40:24,612 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-12-19 15:40:24,978 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-12-19 15:40:25,864 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-12-19 15:40:25,925 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-12-19 15:40:27,370 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-19 15:40:27,387 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 15:40:28,953 WARN  JpaBaseConfiguration$JpaWebConfiguration:223 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19 15:40:29,938 INFO  StartupInfoLogger:61 - [] Started ProductServiceTest in 10.353 seconds (JVM running for 12.463)
+2023-12-19 15:40:30,042 INFO  ProductServiceImpl:122 - [] Initiating the dao call for search the products by title
+2023-12-19 15:40:30,054 INFO  ProductServiceImpl:126 - [] Completed the dao call for search the products by title
+2023-12-19 15:40:30,246 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 15:40:30,251 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-12-19 15:40:30,271 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
