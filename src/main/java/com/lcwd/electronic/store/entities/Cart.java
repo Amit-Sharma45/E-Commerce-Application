@@ -19,7 +19,8 @@ public class Cart {
     private String cartId;
     private Date createdAt;
     @OneToOne
+    @JoinColumn(name = "user_id")
     private User user;
-    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, fetch = FetchType.EAGER,orphanRemoval = true)
     private List<CartItem> items = new ArrayList<>();
 }

@@ -10,6 +10,9 @@ public class AppConstants {
     public static final String CATEGORY_DELETED = "Category Deleted Successfully !!";
     public static final String PRODUCT_DELETED = "Product Deleted Successfully !!";
 
+    public static final String ITEM_DELETED = "Item Removed Successfully !!";
+    public static final String CART_CLEARED = "Now cart is Blank !!";
+
     public static final String PAGE_NUMBER = "0";
     public static final String PAGE_SIZE = "5";
     public static final String SORT_BY = "userId";
