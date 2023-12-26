@@ -1,6 +1,6 @@
 package com.lcwd.electronic.store.service.impl;
 
-import com.lcwd.electronic.store.exceptions.BadApiRequest;
+import com.lcwd.electronic.store.exceptions.BadApiRequestException;
 import com.lcwd.electronic.store.service.ImageService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,7 +40,7 @@ public class ImageServiceImpl implements ImageService {
             Files.copy(file.getInputStream(), Paths.get(fullPathWithFileName));
             return fileNameWithExtension;
         } else {
-            throw new BadApiRequest("file with this " + extension + " not allowed !!");
+            throw new BadApiRequestException("file with this " + extension + " not allowed !!");
         }
 
     }
