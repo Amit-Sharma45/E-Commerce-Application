@@ -2,10 +2,7 @@ package com.lcwd.electronic.store.dtos;
 
 import com.lcwd.electronic.store.entities.OrderItem;
 import com.lcwd.electronic.store.entities.User;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -16,6 +13,7 @@ import java.util.List;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class OrderDto {
     private String orderId;
 
