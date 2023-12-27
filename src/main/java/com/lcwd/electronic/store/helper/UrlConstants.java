@@ -6,4 +6,6 @@ public class UrlConstants {
     public static final String CATEGORY_BASE_URL = "/categories";
 
     public static final String PRODUCT_BASE_URL = "/products";
+
+    public static final String CART_BASE_URL = "/carts";
 }
