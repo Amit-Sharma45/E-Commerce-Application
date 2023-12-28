@@ -8,4 +8,6 @@ public class UrlConstants {
     public static final String PRODUCT_BASE_URL = "/products";
 
     public static final String CART_BASE_URL = "/carts";
+
+    public static final String ORDER_BASE_URL = "/orders";
 }

@@ -1,23 +1,376 @@
-2023-12-27 14:58:29,950 INFO  StartupInfoLogger:55 - [] Starting ElectronicStoreApplication using Java 17.0.5 on DESKTOP-J6LS9NN with PID 12532 (D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore\target\classes started by ACS in D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore)
-2023-12-27 14:58:29,968 INFO  SpringApplication:632 - [] No active profile set, falling back to 1 default profile: "default"
-2023-12-27 14:58:31,649 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-27 14:58:31,834 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 158 ms. Found 5 JPA repository interfaces.
-2023-12-27 14:58:33,456 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8484 (http)
-2023-12-27 14:58:33,489 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
-2023-12-27 14:58:33,491 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.82]
-2023-12-27 14:58:33,837 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
-2023-12-27 14:58:33,838 INFO  ServletWebServerApplicationContext:292 - [] Root WebApplicationContext: initialization completed in 3738 ms
-2023-12-27 14:58:34,246 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-27 14:58:34,447 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.15.Final
-2023-12-27 14:58:34,911 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-12-27 14:58:35,180 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
-2023-12-27 14:58:36,152 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
-2023-12-27 14:58:36,192 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2023-12-27 14:58:38,955 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-12-27 14:58:39,001 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-27 14:58:40,260 WARN  JpaBaseConfiguration$JpaWebConfiguration:223 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-27 14:58:40,879 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8484 (http) with context path ''
-2023-12-27 14:58:40,893 INFO  StartupInfoLogger:61 - [] Started ElectronicStoreApplication in 11.922 seconds (JVM running for 12.868)
-2023-12-27 15:01:46,770 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-27 15:01:46,770 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
-2023-12-27 15:01:46,799 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-12-28 13:07:36,087 INFO  StartupInfoLogger:55 - [] Starting ElectronicStoreApplication using Java 17.0.5 on DESKTOP-J6LS9NN with PID 2308 (D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore\target\classes started by ACS in D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore)
+2023-12-28 13:07:36,102 INFO  SpringApplication:632 - [] No active profile set, falling back to 1 default profile: "default"
+2023-12-28 13:07:37,818 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-28 13:07:38,171 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 301 ms. Found 7 JPA repository interfaces.
+2023-12-28 13:07:40,097 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8484 (http)
+2023-12-28 13:07:40,138 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2023-12-28 13:07:40,139 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-12-28 13:07:40,466 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2023-12-28 13:07:40,467 INFO  ServletWebServerApplicationContext:292 - [] Root WebApplicationContext: initialization completed in 4229 ms
+2023-12-28 13:07:40,837 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-28 13:07:40,974 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-12-28 13:07:41,466 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-12-28 13:07:41,766 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-12-28 13:07:42,795 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-12-28 13:07:42,848 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-12-28 13:07:44,809 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-28 13:07:44,829 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-28 13:07:46,211 WARN  JpaBaseConfiguration$JpaWebConfiguration:223 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-28 13:07:46,892 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8484 (http) with context path ''
+2023-12-28 13:07:46,907 INFO  StartupInfoLogger:61 - [] Started ElectronicStoreApplication in 11.786 seconds (JVM running for 12.705)
+2023-12-28 13:08:01,777 INFO  DirectJDKLog:173 - [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-28 13:08:01,777 INFO  FrameworkServlet:525 - [] Initializing Servlet 'dispatcherServlet'
+2023-12-28 13:08:01,777 INFO  FrameworkServlet:547 - [] Completed initialization in 0 ms
+2023-12-28 13:08:01,877 INFO  CartController:84 - [] Entering the Request to get the Cart with userId : 73ca35c7-1114-482c-9e1f-dc107a1e76ea
+2023-12-28 13:08:01,877 INFO  CartServiceImpl:118 - [] Initiating the dao call for get cart with userId : 73ca35c7-1114-482c-9e1f-dc107a1e76ea
+2023-12-28 13:08:02,414 INFO  CartServiceImpl:121 - [] Completed the dao call for get cart with userId : 73ca35c7-1114-482c-9e1f-dc107a1e76ea
+2023-12-28 13:08:02,487 INFO  CartController:86 - [] Completed the Request to get the Cart with userId : 73ca35c7-1114-482c-9e1f-dc107a1e76ea
+2023-12-28 13:15:15,639 INFO  CartController:32 - [] Entering the Request to add Item to Cart with userId : 73ca35c7-1114-482c-9e1f-dc107a1e76ea
+2023-12-28 13:15:15,639 INFO  CartServiceImpl:47 - [] Initiating the dao call for add item to cart with userId : 73ca35c7-1114-482c-9e1f-dc107a1e76ea
+2023-12-28 13:15:15,852 ERROR DirectJDKLog:175 - [] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: A collection with cascade="all-delete-orphan" was no longer referenced by the owning entity instance: com.lcwd.electronic.store.entities.Cart.items; nested exception is org.hibernate.HibernateException: A collection with cascade="all-delete-orphan" was no longer referenced by the owning entity instance: com.lcwd.electronic.store.entities.Cart.items] with root cause
+org.hibernate.HibernateException: A collection with cascade="all-delete-orphan" was no longer referenced by the owning entity instance: com.lcwd.electronic.store.entities.Cart.items
+	at org.hibernate.engine.internal.Collections.processDereferencedCollection(Collections.java:100)
+	at org.hibernate.engine.internal.Collections.processUnreachableCollection(Collections.java:51)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.lambda$flushCollections$1(AbstractFlushingEventListener.java:251)
+	at org.hibernate.engine.internal.StatefulPersistenceContext.forEachCollectionEntry(StatefulPersistenceContext.java:1140)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.flushCollections(AbstractFlushingEventListener.java:248)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.flushEverythingToExecutions(AbstractFlushingEventListener.java:94)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:489)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3303)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2438)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:449)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at jdk.proxy2/jdk.proxy2.$Proxy117.save(Unknown Source)
+	at com.lcwd.electronic.store.service.impl.CartServiceImpl.addItemToCart(CartServiceImpl.java:93)
+	at com.lcwd.electronic.store.controllers.CartController.addItemToCart(CartController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-12-28 13:17:06,901 INFO  CartController:32 - [] Entering the Request to add Item to Cart with userId : 73ca35c7-1114-482c-9e1f-dc107a1e76ea
+2023-12-28 13:17:06,904 INFO  CartServiceImpl:47 - [] Initiating the dao call for add item to cart with userId : 73ca35c7-1114-482c-9e1f-dc107a1e76ea
+2023-12-28 13:17:06,930 ERROR DirectJDKLog:175 - [] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: A collection with cascade="all-delete-orphan" was no longer referenced by the owning entity instance: com.lcwd.electronic.store.entities.Cart.items; nested exception is org.hibernate.HibernateException: A collection with cascade="all-delete-orphan" was no longer referenced by the owning entity instance: com.lcwd.electronic.store.entities.Cart.items] with root cause
+org.hibernate.HibernateException: A collection with cascade="all-delete-orphan" was no longer referenced by the owning entity instance: com.lcwd.electronic.store.entities.Cart.items
+	at org.hibernate.engine.internal.Collections.processDereferencedCollection(Collections.java:100)
+	at org.hibernate.engine.internal.Collections.processUnreachableCollection(Collections.java:51)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.lambda$flushCollections$1(AbstractFlushingEventListener.java:251)
+	at org.hibernate.engine.internal.StatefulPersistenceContext.forEachCollectionEntry(StatefulPersistenceContext.java:1140)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.flushCollections(AbstractFlushingEventListener.java:248)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.flushEverythingToExecutions(AbstractFlushingEventListener.java:94)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:489)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3303)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2438)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:449)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at jdk.proxy2/jdk.proxy2.$Proxy117.save(Unknown Source)
+	at com.lcwd.electronic.store.service.impl.CartServiceImpl.addItemToCart(CartServiceImpl.java:93)
+	at com.lcwd.electronic.store.controllers.CartController.addItemToCart(CartController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-12-28 13:18:32,905 INFO  CartController:32 - [] Entering the Request to add Item to Cart with userId : 73ca35c7-1114-482c-9e1f-dc107a1e76ea
+2023-12-28 13:18:32,910 INFO  CartServiceImpl:47 - [] Initiating the dao call for add item to cart with userId : 73ca35c7-1114-482c-9e1f-dc107a1e76ea
+2023-12-28 13:18:32,943 ERROR DirectJDKLog:175 - [] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: A collection with cascade="all-delete-orphan" was no longer referenced by the owning entity instance: com.lcwd.electronic.store.entities.Cart.items; nested exception is org.hibernate.HibernateException: A collection with cascade="all-delete-orphan" was no longer referenced by the owning entity instance: com.lcwd.electronic.store.entities.Cart.items] with root cause
+org.hibernate.HibernateException: A collection with cascade="all-delete-orphan" was no longer referenced by the owning entity instance: com.lcwd.electronic.store.entities.Cart.items
+	at org.hibernate.engine.internal.Collections.processDereferencedCollection(Collections.java:100)
+	at org.hibernate.engine.internal.Collections.processUnreachableCollection(Collections.java:51)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.lambda$flushCollections$1(AbstractFlushingEventListener.java:251)
+	at org.hibernate.engine.internal.StatefulPersistenceContext.forEachCollectionEntry(StatefulPersistenceContext.java:1140)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.flushCollections(AbstractFlushingEventListener.java:248)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.flushEverythingToExecutions(AbstractFlushingEventListener.java:94)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:489)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3303)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2438)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:449)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at jdk.proxy2/jdk.proxy2.$Proxy117.save(Unknown Source)
+	at com.lcwd.electronic.store.service.impl.CartServiceImpl.addItemToCart(CartServiceImpl.java:93)
+	at com.lcwd.electronic.store.controllers.CartController.addItemToCart(CartController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-12-28 13:28:29,784 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-28 13:28:29,788 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-12-28 13:28:29,807 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-12-28 13:28:38,867 INFO  StartupInfoLogger:55 - [] Starting ElectronicStoreApplication using Java 17.0.5 on DESKTOP-J6LS9NN with PID 1536 (D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore\target\classes started by ACS in D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore)
+2023-12-28 13:28:38,874 INFO  SpringApplication:632 - [] No active profile set, falling back to 1 default profile: "default"
+2023-12-28 13:28:40,483 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-28 13:28:40,729 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 222 ms. Found 7 JPA repository interfaces.
+2023-12-28 13:28:42,371 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8484 (http)
+2023-12-28 13:28:42,397 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2023-12-28 13:28:42,398 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-12-28 13:28:42,774 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2023-12-28 13:28:42,775 INFO  ServletWebServerApplicationContext:292 - [] Root WebApplicationContext: initialization completed in 3794 ms
+2023-12-28 13:28:43,111 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-28 13:28:43,221 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-12-28 13:28:43,646 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-12-28 13:28:43,976 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-12-28 13:28:44,757 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-12-28 13:28:44,800 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-12-28 13:28:46,747 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-28 13:28:46,764 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-28 13:28:47,886 WARN  JpaBaseConfiguration$JpaWebConfiguration:223 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-28 13:28:48,464 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8484 (http) with context path ''
+2023-12-28 13:28:48,478 INFO  StartupInfoLogger:61 - [] Started ElectronicStoreApplication in 10.55 seconds (JVM running for 11.45)
+2023-12-28 13:28:56,064 INFO  DirectJDKLog:173 - [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-28 13:28:56,065 INFO  FrameworkServlet:525 - [] Initializing Servlet 'dispatcherServlet'
+2023-12-28 13:28:56,069 INFO  FrameworkServlet:547 - [] Completed initialization in 3 ms
+2023-12-28 13:28:56,359 INFO  CartController:32 - [] Entering the Request to add Item to Cart with userId : 73ca35c7-1114-482c-9e1f-dc107a1e76ea
+2023-12-28 13:28:56,360 INFO  CartServiceImpl:47 - [] Initiating the dao call for add item to cart with userId : 73ca35c7-1114-482c-9e1f-dc107a1e76ea
+2023-12-28 13:28:56,871 INFO  CartServiceImpl:95 - [] Completed the dao call for add item to cart with userId : 73ca35c7-1114-482c-9e1f-dc107a1e76ea
+2023-12-28 13:28:56,976 INFO  CartController:34 - [] Completed the Request to add Item to Cart with userId : 73ca35c7-1114-482c-9e1f-dc107a1e76ea
+2023-12-28 13:59:01,411 WARN  HikariPool$HouseKeeper:788 - [] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m16s381ms952µs600ns).
+2023-12-28 14:03:55,119 INFO  OrderController:35 - [] Entering the Request to create the order
+2023-12-28 14:03:55,119 INFO  OrderServiceImpl:45 - [] Initiating the dao call for create order
+2023-12-28 14:03:55,257 INFO  OrderServiceImpl:86 - [] Completed the dao call for create order
+2023-12-28 14:03:55,306 INFO  OrderController:37 - [] Completed the Request to create the order
+2023-12-28 14:15:13,139 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-28 14:15:13,142 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-12-28 14:15:13,157 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-12-28 14:15:24,331 INFO  StartupInfoLogger:55 - [] Starting ElectronicStoreApplication using Java 17.0.5 on DESKTOP-J6LS9NN with PID 2452 (D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore\target\classes started by ACS in D:\New folder\Intellij_Workspaces\ElectronicStore\ElectronicStore)
+2023-12-28 14:15:24,338 INFO  SpringApplication:632 - [] No active profile set, falling back to 1 default profile: "default"
+2023-12-28 14:15:26,351 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-28 14:15:26,758 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 372 ms. Found 7 JPA repository interfaces.
+2023-12-28 14:15:28,069 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8484 (http)
+2023-12-28 14:15:28,107 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2023-12-28 14:15:28,107 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-12-28 14:15:28,357 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2023-12-28 14:15:28,359 INFO  ServletWebServerApplicationContext:292 - [] Root WebApplicationContext: initialization completed in 3896 ms
+2023-12-28 14:15:28,690 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-28 14:15:28,793 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-12-28 14:15:29,195 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-12-28 14:15:29,426 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-12-28 14:15:30,224 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-12-28 14:15:30,279 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-12-28 14:15:32,567 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-28 14:15:32,582 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-28 14:15:34,255 WARN  JpaBaseConfiguration$JpaWebConfiguration:223 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-28 14:15:35,170 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8484 (http) with context path ''
+2023-12-28 14:15:35,186 INFO  StartupInfoLogger:61 - [] Started ElectronicStoreApplication in 11.834 seconds (JVM running for 12.994)
+2023-12-28 14:18:13,193 INFO  DirectJDKLog:173 - [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-28 14:18:13,193 INFO  FrameworkServlet:525 - [] Initializing Servlet 'dispatcherServlet'
+2023-12-28 14:18:13,193 INFO  FrameworkServlet:547 - [] Completed initialization in 0 ms
+2023-12-28 14:18:13,538 INFO  OrderController:35 - [] Entering the Request to create the order
+2023-12-28 14:18:13,542 INFO  OrderServiceImpl:45 - [] Initiating the dao call for create order
+2023-12-28 14:18:14,291 INFO  OrderServiceImpl:87 - [] Completed the dao call for create order
+2023-12-28 14:18:14,535 INFO  OrderController:37 - [] Completed the Request to create the order
+2023-12-28 14:19:55,019 INFO  CartController:32 - [] Entering the Request to add Item to Cart with userId : 73ca35c7-1114-482c-9e1f-dc107a1e76ea
+2023-12-28 14:19:55,019 INFO  CartServiceImpl:47 - [] Initiating the dao call for add item to cart with userId : 73ca35c7-1114-482c-9e1f-dc107a1e76ea
+2023-12-28 14:19:55,373 INFO  CartServiceImpl:95 - [] Completed the dao call for add item to cart with userId : 73ca35c7-1114-482c-9e1f-dc107a1e76ea
+2023-12-28 14:19:55,394 INFO  CartController:34 - [] Completed the Request to add Item to Cart with userId : 73ca35c7-1114-482c-9e1f-dc107a1e76ea
+2023-12-28 14:22:47,177 INFO  OrderController:50 - [] Entering the Request to remove the order with orderId : e3f23d04-2ca8-4a24-835b-99b7e8ba73d8
+2023-12-28 14:22:47,177 INFO  OrderServiceImpl:93 - [] Initiating the dao call for remove order with orderId : e3f23d04-2ca8-4a24-835b-99b7e8ba73d8
+2023-12-28 14:22:47,217 INFO  OrderServiceImpl:96 - [] Completed the dao call for remove order with orderId : e3f23d04-2ca8-4a24-835b-99b7e8ba73d8
+2023-12-28 14:22:47,217 INFO  OrderController:56 - [] Completed the Request to remove the order with orderId : e3f23d04-2ca8-4a24-835b-99b7e8ba73d8
+2023-12-28 14:35:00,220 INFO  OrderController:69 - [] Entering the Request to get the orders of user with userId : 4e4c0d63-91dc-4284-8073-bb969fd2d275
+2023-12-28 14:35:00,222 INFO  OrderServiceImpl:102 - [] Initiating the dao call for get orders of user with userId : 4e4c0d63-91dc-4284-8073-bb969fd2d275
+2023-12-28 14:35:00,278 INFO  OrderServiceImpl:106 - [] Completed the dao call for get orders of user with userId : 4e4c0d63-91dc-4284-8073-bb969fd2d275
+2023-12-28 14:35:00,280 INFO  OrderController:71 - [] Completed the Request to get the orders of user with userId : 4e4c0d63-91dc-4284-8073-bb969fd2d275
+2023-12-28 16:11:14,790 WARN  HikariPool$HouseKeeper:788 - [] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h24m14s68ms54µs400ns).
+2023-12-28 16:22:10,275 INFO  OrderController:92 - [] Entering the Request to get the orders
+2023-12-28 16:22:10,277 INFO  OrderServiceImpl:112 - [] Initiating the dao call for get orders
+2023-12-28 16:22:10,367 INFO  OrderServiceImpl:116 - [] Completed the dao call for get orders
+2023-12-28 16:22:10,425 INFO  OrderController:94 - [] Completed the Request to get the orders
+2023-12-28 16:24:30,762 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-28 16:24:30,765 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-12-28 16:24:30,777 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
