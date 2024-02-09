@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -35,6 +36,7 @@ public class CategoryController {
      * @apiNote create new category
      * @since 1.0
      */
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     public ResponseEntity<CategoryDto> createCategory(
             @Valid @RequestBody CategoryDto categoryDto) {
@@ -52,6 +54,7 @@ public class CategoryController {
      * @apiNote To update the category
      * @since 1.0
      */
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/{categoryId}")
     public ResponseEntity<CategoryDto> updateCategory(
             @Valid @RequestBody CategoryDto categoryDto,
@@ -69,6 +72,7 @@ public class CategoryController {
      * @author AMIT SHARMA
      * @since 1.0
      */
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{categoryId}")
     public ResponseEntity<ApiResponse> deleteCategory(@PathVariable String categoryId) {
         logger.info("Entering the Request to delete the Category with categoryId{}: ", categoryId);

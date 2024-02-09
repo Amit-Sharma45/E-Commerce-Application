@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -44,6 +45,7 @@ public class ProductController {
      * @author AMIT BHARDWAJ
      * @since 1.0
      */
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     public ResponseEntity<ProductDto> createProduct(@Valid @RequestBody ProductDto productDto) {
         logger.info("Entering the Request to create new Product");
@@ -60,6 +62,7 @@ public class ProductController {
      * @author AMIT BHARDWAJ
      * @since 1.0
      */
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/{productId}")
     public ResponseEntity<ProductDto> updateProduct(@Valid @RequestBody ProductDto productDto, @PathVariable String productId) {
         logger.info("Entering the Request to update the product with productId{}: ", productId);
@@ -75,6 +78,7 @@ public class ProductController {
      * @author AMIT BHARDWAJ
      * @since 1.0
      */
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{productId}")
     public ResponseEntity<ApiResponse> deleteProduct(@PathVariable String productId) {
         logger.info("Entering the Request to delete the product with productId{}: ", productId);
@@ -184,6 +188,7 @@ public class ProductController {
      * @author AMIT BHARDWAJ
      * @since 1.0
      */
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/image/{productId}")
     public ResponseEntity<ImageResponse> uploadProductImage(
             @PathVariable String productId,

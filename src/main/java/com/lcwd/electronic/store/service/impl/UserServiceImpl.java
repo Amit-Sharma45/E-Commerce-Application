@@ -1,11 +1,13 @@
 package com.lcwd.electronic.store.service.impl;
 
+import com.lcwd.electronic.store.entities.Role;
 import com.lcwd.electronic.store.payload.PageableResponse;
 import com.lcwd.electronic.store.dtos.UserDto;
 import com.lcwd.electronic.store.entities.User;
 import com.lcwd.electronic.store.exceptions.ResourceNotFoundException;
 import com.lcwd.electronic.store.helper.AppConstants;
 import com.lcwd.electronic.store.helper.Helper;
+import com.lcwd.electronic.store.repositories.RoleRepository;
 import com.lcwd.electronic.store.repositories.UserRepo;
 import com.lcwd.electronic.store.service.UserService;
 import org.modelmapper.ModelMapper;
@@ -17,6 +19,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -34,20 +37,33 @@ public class UserServiceImpl implements UserService {
     Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
     @Autowired
     private UserRepo userRepo;
-
+    @Autowired
+    private PasswordEncoder passwordEncoder;
     @Autowired
     private ModelMapper modelMapper;
 
     @Value("${user.profile.image.path}")
     private String imagePath;
 
+    @Value("${normal.role.id}")
+    private String normalRoleId;
+
+    @Autowired
+    private RoleRepository roleRepository;
+
     @Override
     public UserDto createUser(UserDto userDto) {
         logger.info("Initiating the dao call for save the user");
         String userId = UUID.randomUUID().toString();
         userDto.setUserId(userId);
+        // encoding password
+        userDto.setPassword(passwordEncoder.encode(userDto.getPassword()));
 
         User user = this.modelMapper.map(userDto, User.class);
+
+//    fetch role of normal and set it to user
+        Role role = roleRepository.findById(normalRoleId).get();
+        user.getRoles().add(role);
         User savedUser = this.userRepo.save(user);
         logger.info("Completed the dao call for save the user");
         return modelMapper.map(savedUser, UserDto.class);

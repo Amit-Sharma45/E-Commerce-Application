@@ -8,6 +8,9 @@ import com.lcwd.electronic.store.dtos.UserDto;
 import com.lcwd.electronic.store.helper.AppConstants;
 import com.lcwd.electronic.store.service.ImageService;
 import com.lcwd.electronic.store.service.UserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,6 +30,7 @@ import java.util.List;
 @RestController
 @RequestMapping(UrlConstants.USER_BASE_URL)
 @Slf4j
+@Api(value = "UserController",description = "Rest APIs related to perform user operations !!")
 public class UserController {
     @Autowired
     private UserService userServiceI;
@@ -43,6 +47,12 @@ public class UserController {
      * @since 1.0
      */
     @PostMapping
+    @ApiOperation(value = "create new user")
+    @ApiResponses(value = {
+            @io.swagger.annotations.ApiResponse(code=200,message="Success | OK"),
+            @io.swagger.annotations.ApiResponse(code=401,message="not authorized !!"),
+            @io.swagger.annotations.ApiResponse(code = 201,message = "new user created !!")
+    })
     public ResponseEntity<UserDto> createUser(@Valid @RequestBody UserDto userDto) {
         log.info("Entering the Request for Save user record");
         UserDto userDto1 = this.userServiceI.createUser(userDto);
@@ -74,6 +84,7 @@ public class UserController {
      * @since 1.0
      */
     @GetMapping("/{userId}")
+    @ApiOperation(value = "get single user by userId")
     public ResponseEntity<UserDto> getUserById(@PathVariable String userId) {
         log.info("Entering the Request for get user record by userId{}:", userId);
         UserDto user = this.userServiceI.getUserById(userId);
@@ -88,6 +99,7 @@ public class UserController {
      * @since 1.0
      */
     @GetMapping
+    @ApiOperation(value = "get all users",response = ResponseEntity.class,tags = {"user-controller"})
     public ResponseEntity<PageableResponse<UserDto>> getAllUsers(
             @RequestParam(defaultValue = AppConstants.PAGE_NUMBER, required = false) Integer pageNumber,
             @RequestParam(defaultValue = AppConstants.PAGE_SIZE, required = false) Integer pageSize,
